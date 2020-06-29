@@ -1,19 +1,21 @@
-#container {
-  text-align: center;
-
+#formulaire {
+  text-align: start;
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+
 }
 
-#container strong {
+#questionnaire{
+  padding: 1rem;
+}
+
+#formulaire strong {
   font-size: 20px;
   line-height: 26px;
 }
 
-#container p {
+#formulaire p {
   font-size: 16px;
   line-height: 22px;
 
@@ -22,6 +24,28 @@
   margin: 0;
 }
 
-#container a {
+#formulaire a {
   text-decoration: none;
+}
+
+#select_difficulte {
+  margin-top: 1rem;
+}
+
+#input_pseudo {
+  margin-top: 1rem;
+}
+
+#check_box_enregistrer{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#button_commencer{
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+#error_form{
+  margin-left: 1rem;
 }
