@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>{{score}} {{questions}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Votre score</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <div *ngIf="score>4" class="content">
+        <h2 class="ion-text-center">Félicitations! Votre score est : <span class="ion-color-success">{{score}}</span>
+            / {{questions}}</h2>
+    </div>
+
+    <div *ngIf="score<=4" class="content">
+        <h2 class="ion-text-center">Score : <span class="ion-color-danger">{{score}}</span> / {{questions}} <br> Réessayer !!
+        </h2>
+    </div>
+    <div class="div-btn">
+        <ion-button id="button_recommencer" class="btn" expand="block" color="success"
+                    [routerLink]="['/']">
+            Recommencer
+        </ion-button>
+    </div>
+
+</ion-content>

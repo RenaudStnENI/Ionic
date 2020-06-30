@@ -1,0 +1,49 @@
+.questionnaire {
+  padding: 1rem;
+  text-align: center;
+  height: 70%;
+}
+
+
+#bienvenue {
+  margin-top: 1rem;
+  color: dodgerblue;
+
+}
+
+#questions_reponses {
+  height: 100%;
+}
+
+#button_valider {
+  margin-top: 2rem;
+  bottom: 1rem;
+
+}
+
+.correct {
+  --background: #2dd36f;
+  --background-activated: #2dd36f;
+}
+
+.incorrect {
+  --background: indianred;
+  --background-activated: indianred;
+}
+
+#end_div {
+  padding-top: 4rem;
+  height: 100%;
+}
+
+.btn {
+  margin-top: 2rem;
+}
+
+.div-btn {
+  height: 10%;
+}
+
+.content {
+  height: 90%
+}

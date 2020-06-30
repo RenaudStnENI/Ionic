@@ -3,10 +3,10 @@
   position: absolute;
   left: 0;
   right: 0;
-
+  height: 65%;
 }
 
-#questionnaire{
+#questionnaire {
   padding: 1rem;
 }
 
@@ -36,16 +36,24 @@
   margin-top: 1rem;
 }
 
-#check_box_enregistrer{
+#check_box_enregistrer {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-#button_commencer{
+#button_commencer {
   margin-top: 3rem;
   padding: 0 1rem;
 }
 
-#error_form{
+#error_form {
   margin-left: 1rem;
+}
+
+.btn-div {
+  height: 10%;
+}
+
+.content {
+  height: 90%;
 }

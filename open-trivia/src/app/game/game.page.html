@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>Open Trivia</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Open Trivia</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <div class="container questionnaire">
+        <div id="questions_reponses" *ngIf="!!questionCourante && !theEnd">
+            <div class="content">
+                <p id="bienvenue" class="ion-color-primary ion-text-center">Bienvenue {{pseudo}} !</p>
+                <h2 class="ion-text-center" [innerHTML]="questionCourante.question"></h2>
+                <ion-grid *ngIf="questionCourante && questionCourante.question">
+                    <ion-row>
+                        <ion-col size="6" *ngFor="let choix of propositions">
+                            <ion-button
+                                    (click)="respond(choix)"
+                                    expand="block"
+                                    [ngClass]="{'correct' : next && choix.correct, 'incorrect' : next && !choix.correct}"
+                                    [innerHTML]="choix.proposition"
+                            >
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+            <div class="div-btn">
+                <ion-button *ngIf="displayButton && !end_bool" id="button_valider" class="btn" expand="block"
+                            (click)="ValidateResponse()" fill="outline" [disabled]="!next">Question
+                    suivante
+                </ion-button>
+
+                <ion-button *ngIf="end_bool" id="button_score" class="btn" expand="block"
+                            [routerLink]="['/score',this.score, this.questionsArray.length]">Voir mon
+                    score
+                </ion-button>
+            </div>
+        </div>
+    </div>
+
+</ion-content>
